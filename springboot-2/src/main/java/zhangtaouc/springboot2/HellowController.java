@@ -1,10 +1,12 @@
 package zhangtaouc.springboot2;
 
+import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import zhangtaouc.springboot2.Response.Result;
 
 @RestController
 public class HellowController {
@@ -27,12 +29,19 @@ public class HellowController {
     private Environment env;
 
     @Autowired
-    private Persion persion;
+    private Result result;
+
+    @Autowired
+    private Person person;
 
     @RequestMapping("/hello")
     public String hello() {
-        System.out.println("加载配置文件啦"+ env.getProperty("username"));
-        System.out.println(persion);
-        return "姓名:"+this.name+"年龄："+this.age + this.name1;
+        person.setAge(11);
+        person.setName("张三");
+        result.setRetCode("00000");
+        result.setRetData(person);
+        result.setState(200);
+        String data = JSON.toJSONString(result);
+        return data;
     }
 }

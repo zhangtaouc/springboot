@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 //@ConfigurationProperties(prefix = person)
 @ConfigurationProperties
-public class Persion {
+public class Person {
     private String name;
     private int age;
 
@@ -18,7 +18,7 @@ public class Persion {
                 '}';
     }
 
-    public Persion() {
+    public Person() {
     }
 
     public String getName() {
