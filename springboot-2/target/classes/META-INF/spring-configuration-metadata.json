@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "zhangtaouc.springboot2.Persion",
+      "sourceType": "zhangtaouc.springboot2.Persion"
+    }
+  ],
+  "properties": [
+    {
+      "name": "age",
+      "type": "java.lang.Integer",
+      "sourceType": "zhangtaouc.springboot2.Persion"
+    },
+    {
+      "name": "name",
+      "type": "java.lang.String",
+      "sourceType": "zhangtaouc.springboot2.Persion"
+    }
+  ],
+  "hints": []
+}
