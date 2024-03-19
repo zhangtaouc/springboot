@@ -7,4 +7,6 @@ import java.util.List;
 @Mapper
 public interface StudentMapper {
     List<Student> selectAll();
+    List<Student> getStudentByName(String name);
+    int addStudent(Student student);
 }

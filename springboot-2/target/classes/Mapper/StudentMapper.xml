@@ -8,5 +8,18 @@
         from `student`
     </select>
 
+    <select id="getStudentByName"  parameterType="String" resultType="zhangtaouc.springboot2.Entity.Student">
+        select name,address
+        from `student`
+        where name = #{name}
+    </select>
+
+
+    <insert id="addStudent" parameterType="student">
+        insert into user values(#{name}, #{address})
+    </insert>
+
 
 </mapper>
+
+
