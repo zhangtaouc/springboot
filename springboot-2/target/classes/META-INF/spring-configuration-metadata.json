@@ -2,33 +2,36 @@
   "groups": [
     {
       "name": "",
-<<<<<<< HEAD
-      "type": "zhangtaouc.springboot2.Persion",
-      "sourceType": "zhangtaouc.springboot2.Persion"
-=======
       "type": "zhangtaouc.springboot2.Person",
       "sourceType": "zhangtaouc.springboot2.Person"
->>>>>>> a6c35bb0239ea69761b1164b3a6bf265aa6d0b9b
+    },
+    {
+      "name": "",
+      "type": "zhangtaouc.springboot2.Persion",
+      "sourceType": "zhangtaouc.springboot2.Persion"
     }
   ],
   "properties": [
     {
       "name": "age",
       "type": "java.lang.Integer",
-<<<<<<< HEAD
+      "sourceType": "zhangtaouc.springboot2.Person",
+      "defaultValue": 0
+    },
+    {
+      "name": "age",
+      "type": "java.lang.Integer",
       "sourceType": "zhangtaouc.springboot2.Persion"
-=======
-      "sourceType": "zhangtaouc.springboot2.Person"
->>>>>>> a6c35bb0239ea69761b1164b3a6bf265aa6d0b9b
     },
     {
       "name": "name",
       "type": "java.lang.String",
-<<<<<<< HEAD
-      "sourceType": "zhangtaouc.springboot2.Persion"
-=======
       "sourceType": "zhangtaouc.springboot2.Person"
->>>>>>> a6c35bb0239ea69761b1164b3a6bf265aa6d0b9b
+    },
+    {
+      "name": "name",
+      "type": "java.lang.String",
+      "sourceType": "zhangtaouc.springboot2.Persion"
     }
   ],
   "hints": []
