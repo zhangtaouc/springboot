@@ -3,7 +3,9 @@ package zhangtaouc.springboot2;
 
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import zhangtaouc.springboot2.Entity.Student;
 import zhangtaouc.springboot2.Mapper.StudentMapper;
@@ -39,9 +41,19 @@ public class StudentController {
 
 
 
-    @RequestMapping("/addStudent")
-    public int addStudent(Student student) {
+    @RequestMapping(value = "/addStudent",method = RequestMethod.POST)
+    public String addStudent(@RequestBody Student student) {
+        System.out.println("获取到学生" + student);
         int num = studentMapper.addStudent(student);
-        return num ;
+        if (num == 1) {
+            result.setState(200);
+            result.setRetData("添加成功");
+            result.setRetCode("00000");
+        } else {
+            result.setState(200);
+            result.setRetData("添加失败");
+            result.setRetCode("00001");
+        }
+        return JSON.toJSONString(result) ;
     }
 }

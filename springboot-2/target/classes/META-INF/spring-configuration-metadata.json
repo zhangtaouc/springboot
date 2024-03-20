@@ -15,8 +15,7 @@
     {
       "name": "age",
       "type": "java.lang.Integer",
-      "sourceType": "zhangtaouc.springboot2.Person",
-      "defaultValue": 0
+      "sourceType": "zhangtaouc.springboot2.Person"
     },
     {
       "name": "age",

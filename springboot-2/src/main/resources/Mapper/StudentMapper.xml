@@ -16,7 +16,7 @@
 
 
     <insert id="addStudent" parameterType="student">
-        insert into user values(#{name}, #{address})
+        insert into student values(#{name}, #{address})
     </insert>
 
 
