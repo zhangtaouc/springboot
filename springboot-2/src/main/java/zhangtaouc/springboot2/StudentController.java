@@ -92,4 +92,14 @@ public class StudentController {
         return JSON.toJSONString(result) ;
     }
 
+    @RequestMapping("/getStudentListByName")
+    public String getStudentListByName(String name) {
+        result.setState(200);
+        List<Student> list = studentMapper.getStudentListByName(name);
+        System.out.println("获取道德数据"+list);
+        result.setRetData(list);
+        result.setRetCode("00000");
+        return JSON.toJSONString(result) ;
+    }
+
 }
