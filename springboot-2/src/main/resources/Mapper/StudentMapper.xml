@@ -19,6 +19,14 @@
         insert into student values(#{name}, #{address})
     </insert>
 
+    <insert id="updateStudent" parameterType="student">
+        update student set name=#{name}, address=#{address} where name=#{name}
+    </insert>
+
+    <delete id="deleteStudent" parameterType="String">
+        delete from student where name= #{name}
+    </delete>
+
 
 </mapper>
 
