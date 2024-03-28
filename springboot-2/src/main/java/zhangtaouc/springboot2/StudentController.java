@@ -94,6 +94,7 @@ public class StudentController {
 
     @RequestMapping("/getStudentListByName")
     public String getStudentListByName(String name) {
+        System.out.println("名字:"+name);
         result.setState(200);
         List<Student> list = studentMapper.getStudentListByName(name);
         System.out.println("获取道德数据"+list);

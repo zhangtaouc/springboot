@@ -10,7 +10,7 @@ public interface StudentMapper {
     List<Student> selectAll();
     List<Student> getStudentByName(String name);
 
-    @Select("select name , address from student where name like #{name}")
+    @Select("select name , address from student where name like CONCAT('%', #{name}, '%')")
     List<Student> getStudentListByName(String name);
     int addStudent(Student student);
     int updateStudent(Student student);
